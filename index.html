@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather in 3 Days</title>
+    <link rel="icon" href="./Images/10127236.png" />
+    <!-- * Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- * Bootstrap -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- * Fontawesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- * stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+
+    <div class="main">
+        <!-- ! Search -->
+        <div class="container py-5 text-center">
+            <input type="text" class="search-input w-100 mx-auto rounded-5 py-3 px-4 text-white" autocomplete="off" placeholder="Search a specific city" id="searchInput">
+        </div>
+        <!-- ! Weather section -->
+        <div class="container p-2 weather">
+            <div class="row g-2">
+                <!-- ! Today -->
+                <div class="col-lg-6 item  gap-3  text-light p-2">
+                    <div class="inner rounded-5 py-3 px-4 d-flex flex-column justify-content-between">
+                        <div class="location-info d-flex flex-column align-content-center justify-content-between gap-3">
+                            <div class="location d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-location-dot fs-4"></i>
+                                <h4 class="country fs-2" id="cityName">Cairo</h4> 
+                            </div>
+                            <div class="d-flex flex-column align-items-start gap-1" id="todayDateInfo">
+                                <h5 class="fs-4" id="todayDay">Wednesday</h5>
+                                <div class="d-flex gap-1">
+                                    <h5 class="fs-4" id="todayDate">07</h5>
+                                    <h5 class="fs-4" id="todayMonth">August</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather-data d-flex justify-content-between align-items-center text-end ">
+                            <img src="./Images/weather/clouds.svg" alt="" id="todayConditionImg">
+                            <div class="weather-info">
+                                <div class="d-flex">
+                                    <h1 class="display-3 fw-bold" id="todayTemp">29</h1>
+                                    <span class="display-3 fw-bold">°C</span>
+                                </div>
+                                <h3 class="fw-normal fs-4" id="todayConditionTxt">Partly Cloudy</h3>
+                            </div>
+                        </div>
+                        <div class="weather-condition d-flex justify-content-start pb-2">
+                            <div class="condition-item d-flex align-items-center gap-1 pe-4">
+                                <i class="fa-solid fa-umbrella"></i>
+                                <div class="d-flex">
+                                    <h5 id="humidity">20</h5>
+                                    <h5>%</h5>
+                                </div>
+                            </div>
+                            <div class="condition-item d-flex align-items-center gap-1 px-4">
+                                <i class="fa-solid fa-wind"></i>
+                                <div class="d-flex">
+                                    <h5 id="wind">18</h5>
+                                    <h5>km/h</h5>
+                                </div>
+                            </div>
+                            <div class="condition-item d-flex align-items-center gap-1 ps-4">
+                                <i class="fa-solid fa-compass"></i>
+                                <h5 id="windDirection">East</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ! Tomorrow -->
+                <div class="col-lg-3 item gap-3 text-light p-2">
+                    <div class="inner rounded-5 py-3 px-4">
+                        <div class="text-center pt-2" id="tomorrowDate">
+                            <h5 class="next-day fs-4">Wednesday</h5>
+                        </div>
+                        <div class="weather-data d-flex flex-column justify-content-between align-items-center text-center pt-5" id="tomorrowCondition">
+                            <img class="next-condition-img" src="./Images/weather/clouds.svg" alt="" >
+                            <div class="weather-info">
+                                <div class="d-flex align-items-center justify-content-center pb-1">
+                                    <h2 class="next-max-temp fw-bold">29</h2>
+                                    <h2 class="fw-bold">°C</h2>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center pb-3">
+                                    <h1 class="next-min-temp fs-4 fw-normal">29</h1>
+                                    <h1 class="fs-4 fw-normal">°C</h1>
+                                </div>
+                                <h3 class="next-condition-txt fw-light fs-5">Partly Cloudy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ! After Tomorrow -->
+                <div class="col-lg-3 item gap-3 text-light p-2">
+                    <div class="inner rounded-5 py-3 px-4">
+                        <div class="text-center pt-2">
+                            <h5 class="next-day fs-4">Wednesday</h5>
+                        </div>
+                        <div class="weather-data d-flex flex-column justify-content-between align-items-center text-center pt-5">
+                            <img class="next-condition-img" src="./Images/weather/clouds.svg" alt="" >
+                            <div class="weather-info">
+                                <div class="d-flex align-items-center justify-content-center pb-1">
+                                    <h2 class="next-max-temp fw-bold">29</h2>
+                                    <h2 class="fw-bold">°C</h2>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center pb-3">
+                                    <h1 class="next-min-temp fs-4 fw-normal">29</h1>
+                                    <h1 class="fs-4 fw-normal">°C</h1>
+                                </div>
+                                <h3 class="next-condition-txt fw-light fs-5">Partly Cloudy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
